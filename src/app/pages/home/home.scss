@@ -1,0 +1,784 @@
+:host {
+  display: block;
+}
+
+.hero {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge span {
+  background: linear-gradient(135deg, var(--brown-700) 0%, var(--brown-600) 100%);
+  color: var(--gold-light);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--brown-900);
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--brown-600) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+/* Student Card - Premium ID Card Design */
+.student-card {
+  position: relative;
+  display: flex;
+  max-width: 750px;
+  min-height: 320px;
+  margin: 0 auto 3rem;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 80px rgba(62, 39, 35, 0.3),
+    0 10px 30px rgba(62, 39, 35, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.student-card:hover {
+  transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) scale(1.02);
+  box-shadow: 
+    0 35px 100px rgba(62, 39, 35, 0.35),
+    0 15px 40px rgba(62, 39, 35, 0.25);
+}
+
+.card-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--brown-800) 0%, var(--brown-900) 100%);
+  z-index: 0;
+}
+
+.card-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.02) 10px,
+      rgba(255, 255, 255, 0.02) 20px
+    );
+}
+
+.card-left {
+  position: relative;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, var(--brown-700) 0%, var(--brown-800) 100%);
+  border-right: 3px solid var(--gold);
+  z-index: 1;
+}
+
+.card-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--brown-400), var(--gold));
+}
+
+.photo-frame {
+  position: relative;
+  padding: 8px;
+  background: linear-gradient(135deg, var(--gold) 0%, #c9a227 50%, var(--gold) 100%);
+  border-radius: 20px;
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.photo-border {
+  width: 150px;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--brown-100) 0%, white 100%);
+}
+
+.student-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--brown-200) 0%, var(--brown-100) 100%);
+}
+
+.photo-placeholder span {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--brown-600);
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.card-ribbon {
+  margin-top: 1.25rem;
+  padding: 0.5rem 2rem;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  position: relative;
+}
+
+.card-ribbon span {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brown-900);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.card-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-header-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.school-badge {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.school-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.25rem;
+}
+
+.student-name {
+  font-size: 1.75rem;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.info-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.info-item {
+  flex: 1;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.info-item.full {
+  flex: none;
+  width: 100%;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--brown-300);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.375rem;
+}
+
+.info-value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.semester-badge {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, var(--gold) 0%, #c9a227 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.semester-badge span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brown-900);
+  letter-spacing: 1px;
+}
+
+.decorative-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 1px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brown-700) 0%, var(--brown-600) 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(93, 64, 55, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(93, 64, 55, 0.5);
+  color: var(--gold-light);
+}
+
+.btn-primary svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover svg {
+  transform: translateX(4px);
+}
+
+/* Floating Decorations */
+.hero-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--brown-400);
+  top: -100px;
+  right: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: var(--gold);
+  bottom: -50px;
+  left: -50px;
+  animation: float 6s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+  width: 150px;
+  height: 150px;
+  background: var(--brown-300);
+  top: 50%;
+  right: 10%;
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Features Section - Unique Hexagonal Design */
+.features {
+  padding: 5rem 2rem 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--brown-300));
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  color: var(--brown-800);
+  margin-bottom: 4rem;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  position: relative;
+  width: 280px;
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(145deg, #ffffff 0%, var(--brown-50) 100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin: -20px -10px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: linear-gradient(145deg, #ffffff 0%, var(--cream) 100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: -1;
+}
+
+.feature-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: -2;
+}
+
+.feature-card:hover {
+  transform: scale(1.08) translateY(-5px);
+  z-index: 10;
+  filter: drop-shadow(0 20px 40px rgba(62, 39, 35, 0.25));
+}
+
+.feature-card:hover::after {
+  width: 200%;
+  height: 200%;
+  opacity: 0.15;
+}
+
+.feature-card:nth-child(1) {
+  background: linear-gradient(145deg, var(--brown-600) 0%, var(--brown-700) 100%);
+}
+
+.feature-card:nth-child(1)::before {
+  background: linear-gradient(145deg, var(--brown-700) 0%, var(--brown-800) 100%);
+}
+
+.feature-card:nth-child(1) .feature-icon,
+.feature-card:nth-child(1) h3,
+.feature-card:nth-child(1) p {
+  color: var(--cream);
+}
+
+.feature-card:nth-child(2) {
+  margin-top: 40px;
+  background: linear-gradient(145deg, var(--gold) 0%, #c9a227 100%);
+}
+
+.feature-card:nth-child(2)::before {
+  background: linear-gradient(145deg, #f5e6c3 0%, var(--gold-light) 100%);
+}
+
+.feature-card:nth-child(3) {
+  background: linear-gradient(145deg, var(--brown-400) 0%, var(--brown-500) 100%);
+}
+
+.feature-card:nth-child(3)::before {
+  background: linear-gradient(145deg, var(--brown-100) 0%, var(--brown-200) 100%);
+}
+
+.feature-icon {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brown-700);
+  margin-bottom: 1rem;
+  display: block;
+  text-shadow: 2px 2px 0 rgba(255,255,255,0.3);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: var(--brown-800);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .student-card {
+    flex-direction: column;
+    max-width: 100%;
+    min-height: auto;
+    margin: 0 auto 2rem;
+  }
+
+  .student-card:hover {
+    transform: none;
+  }
+
+  .card-left {
+    width: 100%;
+    padding: 1.5rem;
+    border-right: none;
+    border-bottom: 3px solid var(--gold);
+  }
+
+  .card-left::before {
+    display: none;
+  }
+
+  .photo-border {
+    width: 120px;
+    height: 150px;
+  }
+
+  .card-ribbon {
+    margin-top: 1rem;
+  }
+
+  .card-right {
+    padding: 1.5rem;
+  }
+
+  .card-header-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .student-name {
+    font-size: 1.4rem;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .info-item {
+    padding: 0.75rem;
+  }
+
+  .card-footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .features {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    margin: -15px 0;
+  }
+
+  .feature-card:nth-child(2) {
+    margin-top: -15px;
+  }
+}
+
+/* Small phones (iPhone SE, 375px and below) */
+@media (max-width: 375px) {
+  .hero {
+    padding: 1.5rem 0.75rem;
+    min-height: auto;
+  }
+
+  .hero-badge span {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .student-card {
+    border-radius: 16px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .card-left {
+    padding: 1rem;
+  }
+
+  .photo-border {
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+  }
+
+  .photo-frame {
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+  }
+
+  .card-ribbon span {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.625rem;
+  }
+
+  .card-right {
+    padding: 1rem;
+  }
+
+  .mini-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .school-label {
+    font-size: 0.625rem;
+  }
+
+  .student-name {
+    font-size: 1.125rem;
+  }
+
+  .info-label {
+    font-size: 0.5625rem;
+  }
+
+  .info-value {
+    font-size: 0.8125rem;
+  }
+
+  .info-item {
+    padding: 0.5rem;
+  }
+
+  .semester-badge span {
+    font-size: 0.625rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .features {
+    padding: 2rem 0.75rem 3rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+    width: 200px;
+    height: 200px;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .feature-card h3 {
+    font-size: 0.6875rem;
+    letter-spacing: 2px;
+  }
+
+  .feature-card p {
+    font-size: 0.75rem;
+  }
+}

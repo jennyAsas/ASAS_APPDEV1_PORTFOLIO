@@ -1,0 +1,78 @@
+/* University of Baguio - APPDEV1 Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brown Theme Palette */
+  --brown-900: #3E2723;
+  --brown-800: #4E342E;
+  --brown-700: #5D4037;
+  --brown-600: #6D4C41;
+  --brown-500: #795548;
+  --brown-400: #8D6E63;
+  --brown-300: #A1887F;
+  --brown-200: #BCAAA4;
+  --brown-100: #D7CCC8;
+  --brown-50: #EFEBE9;
+  
+  /* Accent Colors */
+  --gold: #D4AF37;
+  --gold-light: #F4E4BA;
+  --cream: #FFF8E7;
+  --dark-cream: #F5F0E1;
+  
+  /* Text Colors */
+  --text-primary: #3E2723;
+  --text-secondary: #5D4037;
+  --text-muted: #8D6E63;
+  --text-light: #FFFFFF;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(62, 39, 35, 0.1);
+  --shadow-md: 0 4px 12px rgba(62, 39, 35, 0.15);
+  --shadow-lg: 0 8px 24px rgba(62, 39, 35, 0.2);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--dark-cream) 100%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  color: var(--brown-800);
+}
+
+a {
+  color: var(--brown-600);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+::selection {
+  background: var(--brown-300);
+  color: var(--text-light);
+}
